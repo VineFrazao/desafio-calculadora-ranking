@@ -1,10 +1,13 @@
+//cria variaveis que receberao os valores das funcoes
 let halfVictory = takeAway(50, 5)
 let playerRaking = calculateRaking(halfVictory)
 
+//funcao para calcular o numero de vitoria(winAmount) - derrota(lossAmount)
 function takeAway(winAmount = 0, lossAmount = 0){
   return winAmount - lossAmount
 }
 
+//Funcao que define o ranking segundo os valores calculados pela funcao takeAway
 function calculateRaking(victory){
   if(victory <= 10){
     return "Ferro"
@@ -23,4 +26,5 @@ function calculateRaking(victory){
   }
 }
 
+//Exibe os resultados contidos em halfVictory e playerRaking
 console.log(`O Herói tem de saldo de ${halfVictory} está no nível de ${playerRaking}`)
